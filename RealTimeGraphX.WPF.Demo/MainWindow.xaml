@@ -34,7 +34,9 @@
                         <ColumnDefinition Width="1*"/>
                         <ColumnDefinition Width="200"/>
                     </Grid.ColumnDefinitions>
-                    <local:WpfGraphControl Margin="10" Controller="{Binding Controller}" />
+                    <local:WpfGraphControl Margin="10" Controller="{Binding Controller}" 
+            Background="White"
+/>
 
                     <Border Grid.Column="1" Margin="10" BorderBrush="Gray" BorderThickness="1" CornerRadius="5" Padding="5">
                         <StackPanel>
@@ -71,12 +73,17 @@
             <TabItem Header="Multi Series">
                 <Grid>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="17*"/>
+                        <ColumnDefinition Width="27*"/>
+                        <ColumnDefinition Width="874*"/>
                         <ColumnDefinition Width="200"/>
                     </Grid.ColumnDefinitions>
-                    <local:WpfGraphControl Margin="10" Controller="{Binding MultiController}" />
+                    <local:WpfGraphControl Margin="10,10,9.8,10.2" Controller="{Binding MultiController}" Background="White" Grid.ColumnSpan="3"/>
 
-                    <Border Grid.Column="1" Margin="10" BorderBrush="Gray" BorderThickness="1" CornerRadius="5" Padding="5">
+                    <realTimeGraphX:WpfGraphAxisControl Orientation="Vertical" Controller="{Binding Controller}" StringFormat="0.0" 
+                                                        />
+
+                    <Border Grid.Column="3" Margin="10.2,10,9.8,10.2" BorderBrush="Gray" BorderThickness="1" CornerRadius="5" Padding="5">
                         <StackPanel>
                             <TextBlock FontSize="10">Duration</TextBlock>
                             <TextBox Margin="0 5 0 0" Text="{Binding MultiController.Range.MaximumX,Mode=TwoWay}"></TextBox>

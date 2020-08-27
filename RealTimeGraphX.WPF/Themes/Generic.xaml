@@ -34,7 +34,8 @@
                         <ItemsControl x:Name="PART_ItemsControl" ItemsSource="{TemplateBinding Items}" ItemTemplate="{TemplateBinding ItemTemplate}">
                             <ItemsControl.ItemsPanel>
                                 <ItemsPanelTemplate>
-                                    <local:WpfGraphAxisPanel Orientation="{Binding RelativeSource={RelativeSource AncestorType=local:WpfGraphAxisControl},Path=Orientation}"></local:WpfGraphAxisPanel>
+                                    <local:WpfGraphAxisPanel 
+                                    Orientation="{Binding RelativeSource={RelativeSource AncestorType=local:WpfGraphAxisControl},Path=Orientation}"></local:WpfGraphAxisPanel>
                                 </ItemsPanelTemplate>
                             </ItemsControl.ItemsPanel>
                         </ItemsControl>
@@ -85,7 +86,8 @@
                                 </Rectangle>
                                 <TextBlock VerticalAlignment="Bottom" Text="{Binding DisplayText}" RenderTransformOrigin="0.5,0.5">
                                     <TextBlock.RenderTransform>
-                                        <RotateTransform Angle="-30" />
+                                        <RotateTransform Angle="0
+                                                         " />
                                     </TextBlock.RenderTransform>
                                 </TextBlock>
                             </DockPanel>

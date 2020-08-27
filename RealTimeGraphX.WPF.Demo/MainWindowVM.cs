@@ -24,19 +24,17 @@ namespace RealTimeGraphX.WPF.Demo
             Controller.Range.MaximumY = 1080;
             Controller.Range.MaximumX = TimeSpan.FromSeconds(10);
             Controller.Range.AutoY = true;
-
             Controller.DataSeriesCollection.Add(new WpfGraphDataSeries()
             {
                 Name = "Series",
                 Stroke = Colors.DodgerBlue,
             });
-
+            
             MultiController = new WpfGraphController<TimeSpanDataPoint, DoubleDataPoint>();
             MultiController.Range.MinimumY = 0;
             MultiController.Range.MaximumY = 1080;
             MultiController.Range.MaximumX = TimeSpan.FromSeconds(10);
             MultiController.Range.AutoY = true;
-
             MultiController.DataSeriesCollection.Add(new WpfGraphDataSeries()
             {
                 Name = "Series 1",

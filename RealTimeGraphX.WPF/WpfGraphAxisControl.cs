@@ -76,7 +76,7 @@ namespace RealTimeGraphX.WPF
             set { SetValue(TicksProperty, value); }
         }
         public static readonly DependencyProperty TicksProperty =
-            DependencyProperty.Register("Ticks", typeof(int), typeof(WpfGraphAxisControl), new PropertyMetadata(9, (d, e) => (d as WpfGraphAxisControl).OnTicksChanged()));
+            DependencyProperty.Register("Ticks", typeof(int), typeof(WpfGraphAxisControl), new PropertyMetadata(4, (d, e) => (d as WpfGraphAxisControl).OnTicksChanged()));
 
         /// <summary>
         /// Gets or sets the string format which is used to format the ticks value.
